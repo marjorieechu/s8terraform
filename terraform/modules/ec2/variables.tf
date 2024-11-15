@@ -3,6 +3,26 @@ variable "aws_region" {
     default = "us-east-1"
 }
 
+variable "instance_type"  {
+  type        = string
+  default     = "t2.micro"
+}
+
+variable "key_name"  {
+   type        = string
+  default     = "terraform-aws"
+}
+
+variable "volume_size"  {
+   type        = number
+  default     = 30
+}
+
+variable "volume_type"  {
+   type        = string
+  default     = "gp3"
+}
+
 variable "tags" {
     type = map(string)
     default = {
