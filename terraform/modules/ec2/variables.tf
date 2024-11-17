@@ -23,6 +23,11 @@ variable "volume_type"  {
   default     = "gp3"
 }
 
+variable "resource_type"  {
+   type        = string
+  default     = "Jenkins ec2"
+}
+
 variable "tags" {
     type = map(string)
     default = {

@@ -18,6 +18,6 @@ resource "aws_instance" "ec2" {
   }
 
   tags = merge(var.tags, {
-    Name = "jenkins-master"
+    Name = format("%s-%s-${var.resource_type}", var.tags["environment"]. var.tags["project"])
   })
 }
